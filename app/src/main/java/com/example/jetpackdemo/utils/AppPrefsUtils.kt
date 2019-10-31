@@ -14,4 +14,75 @@ object AppPrefsUtils {
         ed = sp.edit()
     }
 
+    /*
+        Boolean数据
+     */
+    fun putBoolean(key: String, value: Boolean) {
+        ed.putBoolean(key, value)
+        ed.commit()
+    }
+
+    fun getBoolean(key: String): Boolean {
+        return sp.getBoolean(key, true)
+    }
+
+    /*
+        String数据
+     */
+    fun putString(key: String, value: String) {
+        ed.putString(key, value)
+        ed.commit()
+    }
+
+    fun getString(key: String): String {
+        return sp.getString(key, "")
+    }
+
+    /*
+        Int数据
+     */
+    fun putInt(key: String, value: Int) {
+        ed.putInt(key, value)
+        ed.commit()
+    }
+
+    fun getInt(key: String): Int {
+        return sp.getInt(key, 0)
+    }
+
+    /*
+        Long数据
+     */
+    fun putLong(key: String, value: Long) {
+        ed.putLong(key, value)
+        ed.commit()
+    }
+
+    fun getLong(key: String): Long {
+        return sp.getLong(key, 0)
+    }
+
+    /*
+        Set数据
+     */
+    fun putStringSet(key: String, set: Set<String>) {
+        val localSet = getStringSet(key).toMutableSet()
+        localSet.addAll(set)
+        ed.putStringSet(key, localSet)
+        ed.commit()
+    }
+
+    fun getStringSet(key: String): Set<String> {
+        val set = setOf<String>()
+        return sp.getStringSet(key, set)
+    }
+
+    /*
+        删除key数据
+     */
+    fun remove(key: String) {
+        ed.remove(key)
+        ed.commit()
+    }
+
 }
