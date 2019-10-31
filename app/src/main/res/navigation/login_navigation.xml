@@ -9,22 +9,35 @@
         android:id="@+id/welcome"
         android:name="com.example.jetpackdemo.ui.fragment.WelcomeFragment"
         android:label="LoginFragment"
-        tools:layout="@layout/fragment_welcome" >
+        tools:layout="@layout/fragment_welcome">
         <action
-            android:id="@+id/action_welcomeFragment_to_loginFragment"
+            android:id="@+id/action_welcomeFragment_to_login"
             app:destination="@id/login" />
         <action
-            android:id="@+id/action_welcomeFragment_to_registerFragment"
-            app:destination="@id/register" />
+            android:id="@+id/action_welcomeFragment_to_register"
+            app:destination="@id/register"
+            app:enterAnim="@anim/common_slide_in_right"
+            app:exitAnim="@anim/common_slide_out_left"
+            app:popEnterAnim="@anim/common_slide_in_left"
+            app:popExitAnim="@anim/common_slide_out_right" />
     </fragment>
+
     <fragment
         android:id="@+id/login"
         android:name="com.example.jetpackdemo.ui.fragment.LoginFragment"
         android:label="LoginFragment"
         tools:layout="@layout/fragment_login" />
+
     <fragment
         android:id="@+id/register"
         android:name="com.example.jetpackdemo.ui.fragment.RegisterFragment"
         android:label="LoginFragment"
-        tools:layout="@layout/fragment_register" />
+        tools:layout="@layout/fragment_register">
+        <argument
+            android:name="EMAIL"
+            android:defaultValue="1234@qq.com"
+            app:argType="string" />
+    </fragment>
+
+
 </navigation>

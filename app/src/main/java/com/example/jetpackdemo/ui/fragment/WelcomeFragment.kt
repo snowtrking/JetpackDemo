@@ -42,7 +42,10 @@ class WelcomeFragment : Fragment() {
 
         btn_register.setOnClickListener {
             // 利用SafeArgs传递参数
-
+            val action=WelcomeFragmentDirections
+                .actionWelcomeFragmentToRegister()
+                .setEMAIL("1234@qq.com")
+            findNavController().navigate(action)
         }
     }
 }
