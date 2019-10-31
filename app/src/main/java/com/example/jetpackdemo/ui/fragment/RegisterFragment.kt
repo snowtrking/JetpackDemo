@@ -1,4 +1,4 @@
-package com.example.jetpackdemo
+package com.example.jetpackdemo.ui.fragment
 
 import android.content.Context
 import android.net.Uri
@@ -7,6 +7,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import com.example.jetpackdemo.R
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
