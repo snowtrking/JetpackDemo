@@ -1,4 +1,4 @@
-package com.example.jetpackdemo.ui.fragment
+package com.example.jetpackdemo.ui.fragment.login
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -9,7 +9,6 @@ import androidx.navigation.fragment.findNavController
 import androidx.navigation.navOptions
 import com.example.jetpackdemo.R
 import com.example.jetpackdemo.common.BaseConstant
-import com.example.jetpackdemo.utils.AppPrefsUtils
 import kotlinx.android.synthetic.main.fragment_welcome.*
 
 class WelcomeFragment : Fragment() {
@@ -33,7 +32,8 @@ class WelcomeFragment : Fragment() {
                     popExit = R.anim.common_slide_out_left
                 }
             }
-            val name = AppPrefsUtils.getString(BaseConstant.SP_USER_NAME)
+//            val name = AppPrefsUtils.getString(BaseConstant.SP_USER_NAME)
+            val name = "Steve"
             // Navigation 传递参数
             val bundle = Bundle()
             bundle.putString(BaseConstant.ARGS_NAME, name)
@@ -42,8 +42,8 @@ class WelcomeFragment : Fragment() {
 
         btn_register.setOnClickListener {
             // 利用SafeArgs传递参数
-            val action=WelcomeFragmentDirections
-                .actionWelcomeFragmentToRegister()
+            val action=
+                WelcomeFragmentDirections.actionWelcomeFragmentToRegister()
                 .setEMAIL("1234@qq.com")
             findNavController().navigate(action)
         }
