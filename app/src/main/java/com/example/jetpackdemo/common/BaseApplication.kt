@@ -6,6 +6,7 @@ import android.content.Context
 open class BaseApplication : Application() {
     override fun onCreate() {
         super.onCreate()
+        context = this
     }
 
     companion object {

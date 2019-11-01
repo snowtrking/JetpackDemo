@@ -21,7 +21,6 @@
             android:paddingEnd="10dp"
             android:drawablePadding="10dp"
             android:text="Cancel"
-            android:onClick="@{()-> activity.onBackPressed()}"
             android:textColor="@color/colorPrimary"/>
 
         <TextView
