@@ -4,7 +4,6 @@ import android.content.Context
 import android.content.Intent
 import android.widget.Toast
 import androidx.databinding.ObservableField
-import androidx.navigation.navOptions
 import com.example.jetpackdemo.common.BaseConstant
 import com.example.jetpackdemo.ui.activity.MainActivity
 
